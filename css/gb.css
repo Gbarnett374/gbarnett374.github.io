@@ -1,0 +1,189 @@
+body{
+	color:black;
+}
+/********* nav bar **********/
+.navbar-fixed-top{
+	background-color: #f8f8f8;
+}
+.navbar-header .navbar-brand{
+	font-weight: bold; 
+	font-family: 'Oswald', sans-serif;
+	color:black;
+}
+.navbar-default{
+	border:0px;
+}
+.navbar-default .navbar-nav > li > a{
+	font-size: 2em;
+	font-weight: bold; 
+	font-family: 'Oswald', sans-serif;
+	color:black;	
+}
+.navbar-collapse {
+	text-align: center;
+}
+/*******CONTENT***********/
+.section_header{
+	font-size: 3em;
+}
+header .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+header{
+	background: url('../img/backgroundphoto.jpg');
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-position: center;
+}
+#intro{
+	height:100%;
+	text-align: center;
+	padding: 40px; 
+
+}
+#name{
+	font-size: 5em;
+	font-weight: bold; 
+	font-family: 'Oswald', sans-serif;
+}
+#skill_intro{
+	font-size: 3em;
+	font-weight: 300; 
+	font-family: 'Oswald', sans-serif;	
+}
+#about{
+	height:100%;
+	text-align: center;
+	padding-top: 28px;
+	font-family: 'Oswald', sans-serif;
+	background-color: #D1DBBD;
+	padding-bottom: 50px;
+}
+#about_text{
+	padding: 40px;
+	font-family: 'Oswald', sans-serif;
+	font-weight:300;
+}
+#about_text > p{
+	text-align: left;
+}
+#skills{
+	height:100%;
+	padding-top: 28px;
+	text-align: center;
+	font-weight: 400; 
+	font-family: 'Oswald', sans-serif;
+	background-color: #91AA9D;
+}
+.skill_col{
+	font-weight: 300;
+	font-size: 1.25em;
+}
+.skill_row{
+	font-weight: 300;
+}
+#contact{
+	height:100%;
+	padding-top: 28px;
+	text-align: center;
+	font-weight: 400; 
+	font-family: 'Oswald', sans-serif;
+	background-color: #3E606F;
+}
+#profile_img{
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black 2px;
+  border-radius: 350px;
+  height: 200px;
+  width: 200px;
+}
+.skills_md_12{
+	margin-bottom: 40px;
+}
+.academic_experience{
+	margin-bottom: 5px;
+}
+.social_container{
+	padding:25px;
+}
+#github_button{
+	margin-right: 50px;
+}
+#resume_button{
+	margin-right: 50px;
+}
+#email_text{
+	padding:25px;
+}
+.email_button{
+	width: 250px;
+	background-color: #f8f8f8;
+	color:black;
+}
+.btn:hover{
+	background-color:#CDCDCD;
+}
+span.glyphicon-music{
+	font-size: 2.5em;
+	padding: 25px;
+}
+.social_container a{
+	color:#f8f8f8;
+}
+.social_container a:hover{
+	color:#CDCDCD;
+}
+footer{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	color:black;
+	padding: 30px;
+  	font-size: 1.25em;
+	background-color: #f8f8f8;
+}
+/********MEDIA QUERIES ******************/
+@media(min-width:768px) {
+	.navbar-header .navbar-brand{
+		font-size: 2.5em;
+	}
+	.navbar-fixed-top{
+		padding:25px 0px;
+	}
+	#intro{
+		margin-top: 100px;
+	}
+	#about_text{
+		font-size: 1.5em;
+	}
+	.contact_content{
+		font-size: 1.5em;
+	}
+	header .container {
+	    padding-top: 50px;
+	    padding-bottom: 450px;
+	}
+}
+@media(max-width:768px){
+	.navbar-header .navbar-brand{
+		font-size: 1.75em;
+	}
+	.section_header{
+		font-size: 2.7em;
+	}
+	#name{
+		font-size: 3em;
+	}
+	#skill_intro{
+		font-size: 2em;
+	}
+	#profile_img{
+		height: 100px;
+  		width: 100px;
+	}
+	header .container {
+	    padding-top: 50px;
+	    padding-bottom: 250px;
+	}
+}
