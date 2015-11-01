@@ -1,5 +1,5 @@
 <?php 
-require 'db.php';
+require './include/db.php';
 
 /**
  * Grabs the user info from $_SERVER and inserts it into a table. 
