@@ -35,7 +35,7 @@ function getTableSize($dbc, $db_name, $table_name, $threshold)
  */
 function sendEmail($truncated, $table_size, $table_name, $error = false)
 {
-    date_default_timezone_set('America/New_York ');
+    date_default_timezone_set('America/New_York');
     $date = date('m/d/Y h:i:s a', time());
     $msg = "The Current time is: {$date}\n";
 
