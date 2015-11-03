@@ -41,12 +41,12 @@ function sendEmail($truncated, $table_size, $table_name, $error = false)
 
     if ($truncated) {
         $msg .= "{$table_name} has been truncated. The size of the table was {$table_size} MB";
-    } else if ($error){
+    } else if ($error) {
         $msg .= $error;
     } else {
         $msg .= "{$table_name} is currently {$table_size} MB";
-
     }
+
     echo $msg;
     $to = "bahh374@aol.com";
     $subject = "Database Cleanup Script Executed";
@@ -55,7 +55,6 @@ function sendEmail($truncated, $table_size, $table_name, $error = false)
 
     //Send the email. Need to setup Postfix. 
     // mail($to, $subject, $msg, $headers);
-
 }
 /**
  * Truncates the specified table. 
@@ -81,5 +80,5 @@ try{
     getTableSize($dbc, $db_name, $table_name, $threshold);
 } catch (Exception $e) {
     $error = $e->getMessage();
-    sendEmail($dbc, $db_name, $table_name, $error );
+    sendEmail($dbc, $db_name, $table_name, $error);
 }
