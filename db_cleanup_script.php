@@ -35,6 +35,7 @@ function sendEmail($truncated, $table_size, $table_name)
 		$msg .= "{$table_name} is currently {$table_size} MB";
 
 	}
+	echo $msg;
 
 }
 
