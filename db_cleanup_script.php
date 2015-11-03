@@ -3,7 +3,7 @@ require './include/db.php';
 
 $db_name = "gbarnett_website";
 $table_name = "user_tracking";
-$threshold = 1000;
+$threshold = .01;
 function getTableSize($dbc, $db_name, $table_name, $threshold)
 {
 	$sql = "SELECT table_name AS 'Table', 
@@ -23,7 +23,7 @@ function getTableSize($dbc, $db_name, $table_name, $threshold)
 	}	
 }
 
-function sendEmail($truncated, $table_size, $table_name)
+function sendEmail($truncated, $table_size, $table_name, $error = false)
 {
 	date_default_timezone_set('America/New_York	');
 	$date = date('m/d/Y h:i:s a', time());
@@ -31,6 +31,8 @@ function sendEmail($truncated, $table_size, $table_name)
 
 	if ($truncated) {
 		$msg .= "{$table_name} has been truncated. The size of the table was {$table_size} MB";
+	} else if ($error){
+		$msg .= $error;
 	} else {
 		$msg .= "{$table_name} is currently {$table_size} MB";
 
@@ -42,7 +44,14 @@ function sendEmail($truncated, $table_size, $table_name)
 function truncateTable($dbc, $table_name)
 {
 	$sql = "TRUNCATE TABLE {$table_name}";
-	$dbc->query($sql);
+	if (!$dbc->query($sql)) {
+		throw new Exception("Error truncating the table {$table_name}");
+	}
 }
 
-getTableSize($dbc, $db_name, $table_name, $threshold);
+try{
+	getTableSize($dbc, $db_name, $table_name, $threshold);
+} catch (Exception $e) {
+	$error = $e->getMessage();
+	sendEmail($dbc, $db_name, $table_name, $error );
+}
