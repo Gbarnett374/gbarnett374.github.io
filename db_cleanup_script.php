@@ -13,7 +13,7 @@ function getTableSize($dbc, $db_name, $table_name, $threshold)
 	AND table_name = '{$table_name}'";
 
 	if ($result = $dbc->query($sql)) {
-		$row = $result->fetch_row();
+		$row = $result->fetch_assoc();
 		if ($row['Size_MB'] >= $threshold) {
 			truncateTable($dbc, $table_name);
 			sendEmail(true, $row['Size_MB'], $table_name);
