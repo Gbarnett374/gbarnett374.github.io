@@ -44,3 +44,5 @@ function truncateTable($dbc, $table_name)
 	$sql = "TRUNCATE TABLE {$table_name}";
 	$dbc->query($sql);
 }
+
+getTableSize($dbc, $db_name, $table_name, $threshold);
