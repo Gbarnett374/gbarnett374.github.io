@@ -47,14 +47,13 @@ function sendEmail($truncated, $table_size, $table_name, $error = false)
         $msg .= "{$table_name} is currently {$table_size} MB";
     }
 
-    echo $msg;
     $to = "bahh374@aol.com";
     $subject = "Database Cleanup Script Executed";
-    $headers = "From: Bahhnet.Synology.Me" . "\r\n";
+    $headers = "From: Gbarnett.net" . "\r\n";
     $headers .= 'X-Mailer: PHP/' . phpversion();
 
-    //Send the email. Need to setup Postfix. 
-    // mail($to, $subject, $msg, $headers);
+    //Send the email.
+    mail($to, $subject, $msg, $headers);
 }
 /**
  * Truncates the specified table. 
