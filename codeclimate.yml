@@ -5,3 +5,11 @@ languages:
   Python: true
 exclude_paths:
 - "css/animate.css"
+- "css/bootstrap.css"
+- "css/bootstrap.min.css"
+- "css/font-awesome-4.4.0/*"
+- "js/jquery.js"
+- "js/html5shiv-printshiv.min.js"
+- "js/bootstrap.min.js"
+- "js/jquery.easing.min.js"
+- "js/bootstrap.js"
