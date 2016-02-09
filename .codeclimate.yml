@@ -1,15 +1,34 @@
-engines: 
+---
+engines:
+  phpcodesniffer:
+    enabled: true
+  phpmd:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+      - python
+      - php
   eslint:
     enabled: true
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
 ratings:
-   paths:
-   - "**.js"
-languages:
-  Ruby: true
-  JavaScript: true
-  PHP: true
-  Python: true
+  paths:
+  - "**.inc"
+  - "**.js"
+  - "**.jsx"
+  - "**.module"
+  - "**.php"
+  - "**.py"
+  - "**.rb"
 exclude_paths:
+- vendor/
 - "css/animate.css"
 - "css/bootstrap.css"
 - "css/bootstrap.min.css"
