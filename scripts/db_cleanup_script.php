@@ -1,5 +1,5 @@
 <?php
-require './include/db.php';
+require '../include/db.php';
 /**
  * Gets the size of the table from the information schema & determines if threshold is met.
  * @param  [object] $dbc        - the mysqli db connection object.
