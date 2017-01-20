@@ -1,0 +1,26 @@
+{
+  "name": "new_website",
+  "version": "1.0.0",
+  "description": "My new website!  <br> <a href=\"https://codeclimate.com/github/Gbarnett374/new_website\"><img src=\"https://codeclimate.com/github/Gbarnett374/new_website/badges/gpa.svg\" /></a>",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gbarnett374/new_website.git"
+  },
+  "author": "gbarnett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gbarnett374/new_website/issues"
+  },
+  "homepage": "https://github.com/Gbarnett374/new_website#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.4"
+  }
+}
