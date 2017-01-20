@@ -1,7 +1,8 @@
-var gulp = require('gulp'),
-   uglify = require('gulp-uglify');
-   jshint = require('gulp-jshint');
-   concat = require('gulp-concat');
+const gulp = require('gulp');
+const uglify = require('gulp-uglify');
+const jshint = require('gulp-jshint');
+const concat = require('gulp-concat');
+const order  = require('gulp-order');
 
 gulp.task('js', function () {
    return gulp.src('../assets/js/*.js')
