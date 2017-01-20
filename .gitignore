@@ -13,3 +13,4 @@ Thumbs.db
 ######################
 *.pdf
 db.php
+node_modules
