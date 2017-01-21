@@ -5,13 +5,20 @@ const concat = require('gulp-concat');
 const order  = require('gulp-order');
 
 gulp.task('js', function () {
-   return gulp.src('../assets/js/*.js')
-      .pipe(order([
+   return gulp.src(['!../assets/js/html5shiv-printshiv.min.js',
+    '../assets/js/*.js'
+    ])
+    .pipe(order([
         "jquery-3.1.0.min.js",
         "jquery.easing.min.js",
         "*.js"
-      ]))
-      .pipe(uglify())
-      .pipe(concat('app.js'))
-      .pipe(gulp.dest('build'));
+    ]))
+    .pipe(uglify())
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('build'));
+});
+
+
+gulp.task('watch', function(){
+  gulp.watch('../assets/js/*.js', ['js']); 
 });
