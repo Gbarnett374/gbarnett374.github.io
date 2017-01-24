@@ -1,8 +1,10 @@
-const gulp   = require('gulp');
-const uglify = require('gulp-uglify');
-const jshint = require('gulp-jshint');
-const concat = require('gulp-concat');
-const order  = require('gulp-order');
+const gulp       = require('gulp');
+const uglify     = require('gulp-uglify');
+const jshint     = require('gulp-jshint');
+const concat     = require('gulp-concat');
+const order      = require('gulp-order');
+const cleanCSS   = require('gulp-clean-css');
+
 
 gulp.task('js', () => {
    return gulp.src(['!../assets/js/html5shiv-printshiv.min.js',
@@ -18,6 +20,12 @@ gulp.task('js', () => {
     .pipe(gulp.dest('build'));
 });
 
+gulp.task('css', () => {
+    return gulp.src('../assets/css/*.css')
+    .pipe(concat('styles.css'))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('build'));
+});
 
 gulp.task('watch', () => {
   gulp.watch('../assets/js/*.js', ['js']); 
