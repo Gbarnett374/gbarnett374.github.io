@@ -7,7 +7,8 @@ const cleanCSS   = require('gulp-clean-css');
 
 
 gulp.task('js', () => {
-   return gulp.src(['!../assets/js/html5shiv-printshiv.min.js',
+   return gulp.src([
+    '!../assets/js/html5shiv-printshiv.min.js',
     '../assets/js/*.js'
     ])
     .pipe(order([
@@ -17,16 +18,17 @@ gulp.task('js', () => {
     ]))
     .pipe(uglify())
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('../assets/builds'));
 });
 
 gulp.task('css', () => {
     return gulp.src('../assets/css/*.css')
-    .pipe(concat('styles.css'))
     .pipe(cleanCSS())
-    .pipe(gulp.dest('build'));
+    .pipe(concat('styles.css'))
+    .pipe(gulp.dest('../assets/builds'));
 });
 
 gulp.task('watch', () => {
-  gulp.watch('../assets/js/*.js', ['js']); 
+  gulp.watch('../assets/js/*.js', ['js']);
+  gulp.watch('../assets/css/*.css', ['css']);  
 });
