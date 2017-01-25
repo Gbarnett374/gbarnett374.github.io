@@ -32,3 +32,5 @@ gulp.task('watch', () => {
   gulp.watch('../assets/js/*.js', ['js']);
   gulp.watch('../assets/css/*.css', ['css']);  
 });
+
+gulp.task('build', ['js', 'css']);
