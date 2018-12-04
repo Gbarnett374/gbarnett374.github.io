@@ -11,6 +11,5 @@ Thumbs.db
 
 # Other files #
 ######################
-*.pdf
 db.php
 node_modules
