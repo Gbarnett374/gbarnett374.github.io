@@ -25,6 +25,7 @@
     "gulp-jshint": "^2.1.0",
     "gulp-order": "^1.2.0",
     "gulp-uglify": "^3.0.2",
-    "jshint": "^2.13.1"
+    "jshint": "^2.13.1",
+    "glob-parent": ">=5.1.2"
   }
 }
