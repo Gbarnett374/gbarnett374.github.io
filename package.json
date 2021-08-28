@@ -17,12 +17,14 @@
   },
   "homepage": "https://github.com/Gbarnett374/new_website#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^2.3.2",
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-jshint": "^2.0.4",
-    "gulp-order": "^1.1.1",
-    "gulp-uglify": "^2.0.0",
-    "jshint": "^2.9.4"
+    "gulp-jshint": "^2.1.0",
+    "gulp-order": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.13.1"
   }
 }
